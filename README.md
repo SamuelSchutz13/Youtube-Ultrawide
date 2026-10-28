@@ -28,6 +28,7 @@ By default, YouTube caps the content width and limits how many videos appear per
 
 ## Filters
 
+- [Youtube Ultrawide Assets](https://github.com/SamuelSchutz13/Youtube-Ultrawide/blob/main/yt-ultrawide-assets.txt)
 ## Customization
 
 To change the number of videos per row, edit the value of `--ytd-rich-grid-items-per-row` in the filters:
