@@ -1,0 +1,23 @@
+! ----------------------------------------------------------
+! YT - Home page: remove shelves (Shorts, news...)
+! ----------------------------------------------------------
+www.youtube.com##ytd-browse[page-subtype="home"] ytd-rich-section-renderer:remove()
+
+! ----------------------------------------------------------
+! YT - Home page
+! ----------------------------------------------------------
+! Base width with no limit
+www.youtube.com##ytd-rich-grid-renderer:style(max-width: none !important; --ytd-rich-grid-content-max-width: 100% !important;)
+www.youtube.com##ytd-rich-grid-renderer #contents.ytd-rich-grid-renderer:style(width: 100% !important; max-width: 100% !important;)
+
+! Home page: always 8 videos per row (takes priority over the rules above)
+www.youtube.com##ytd-browse[page-subtype="home"] ytd-rich-grid-renderer:style(--ytd-rich-grid-items-per-row: 8 !important;)
+
+! ----------------------------------------------------------
+! YT - Channel tab at full width
+! ----------------------------------------------------------
+www.youtube.com##ytd-two-column-browse-results-renderer:is(.grid, .grid-5-columns, .grid-6-columns):style(width: 100% !important; max-width: 100% !important; margin: 0 !important;)
+www.youtube.com##ytd-browse[page-subtype="channels"] :is(#page-header-container, #tabs-inner-container):style(max-width: none !important;)
+
+! Channel: always 8 videos per row (takes priority over the rules above)
+www.youtube.com##ytd-browse[page-subtype="channels"] ytd-rich-grid-renderer:style(--ytd-rich-grid-items-per-row: 8 !important;)
